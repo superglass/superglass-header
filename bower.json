@@ -1,0 +1,20 @@
+{
+  "name": "superglass-header",
+  "version": "0.0.0",
+  "homepage": "https://github.com/superglass/superglass-header",
+  "authors": [
+    "Andrey Kurdyumov <kant2002@gmail.com>"
+  ],
+  "description": "Header component for the Super Glass UI framework",
+  "keywords": [
+    "superglass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

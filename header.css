@@ -1,0 +1,117 @@
+:root {
+	/* Default values */
+    --default-tabbar-bg: #333;
+    --default-tabbar-color: #fff;
+    --default-tabbar-button-border: solid 1px #191919;
+	
+	/* Theming values 
+    --superglass-tabbar-bg: black;
+    --superglass-tabbar-color: black;
+    --superglass-tabbar-button-border: solid 1px #191919;
+	*/
+	
+	/* Effective values */
+
+    --effective-tabbar-bg: var(--superglass-tabbar-bg, var(--default-tabbar-bg));
+    --effective-tabbar-color: var(--superglass-tabbar-color, var(--default-tabbar-color));
+    --effective-tabbar-button-border: var(--superglass-tabbar-button-border, var(--default-tabbar-button-border));
+
+}
+
+.tab-bar {
+    -webkit-backface-visibility: hidden;
+    background: var(--effective-tabbar-bg);
+    color: var(--effective-tabbar-color);
+    height: 2.8125rem;
+    line-height: 2.8125rem;
+    position: relative
+}
+
+.tab-bar h1,.tab-bar h2,.tab-bar h3,.tab-bar h4,.tab-bar h5,.tab-bar h6 {
+    color: var(--effective-tabbar-color);
+    font-weight: 700;
+    line-height: 2.8125rem;
+    margin: 0
+}
+
+.tab-bar h1,.tab-bar h2,.tab-bar h3,.tab-bar h4 {
+    font-size: 1.125rem
+}
+
+.left-small {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    position: absolute;
+    top: 0;
+    border-right: var(--effective-tabbar-button-border);
+    left: 0
+}
+
+.right-small {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    position: absolute;
+    top: 0;
+    border-left: var(--effective-tabbar-button-border);
+    right: 0
+}
+
+.tab-bar-section {
+    padding: 0 .625rem;
+    position: absolute;
+    text-align: center;
+    height: 2.8125rem;
+    top: 0
+}
+
+@media only screen and (min-width: 40.063em) {
+    .tab-bar-section {
+        text-align:left;
+    }
+}
+
+.tab-bar-section.left {
+    left: 0;
+    right: 2.8125rem
+}
+
+.tab-bar-section.right {
+    left: 2.8125rem;
+    right: 0
+}
+
+.tab-bar-section.middle {
+    left: 2.8125rem;
+    right: 2.8125rem
+}
+
+.tab-bar .fa {  
+	padding: 10px 0;
+	font-size: 1.5em;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.tab-bar .fa:active {
+	color: color(#fff lightness(-20%));
+	top: 2px;
+	position: relative;
+}
+
+.tab-bar .logo {
+    display: none;
+}
+
+@media only screen and (min-device-width : 768px) and (orientation : landscape) {
+    .tab-bar .logo {
+        display: block;
+        width: 125px;
+        float: left;
+        margin-top: 3px;
+    }
+    .tab-bar h1 {
+        text-align: center;
+        margin-right: 125px;
+    }
+}
